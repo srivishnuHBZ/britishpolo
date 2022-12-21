@@ -1,0 +1,1284 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+        
+
+body{
+    font-family:serif;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    justify-content: center;
+    align-item: center;
+    background-position: center; 
+    
+}
+.title{
+    padding: 15px 0;
+    text-align: center;
+    color: black;
+}
+/* ---------------------------------------slider-----------------------------*/
+.slider{
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+        
+}
+#slider{
+	width: 100%;
+        
+}
+.carousel-caption{
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: initial;
+}
+.slides{
+    width: 500%;
+    height: 650px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.navigation-manual{
+    position: absolute;
+    width: 1500px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    
+}
+.navigation-auto{
+    position: absolute;
+    display: none;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+.navigation-auto div{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: black;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: black;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: black;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: black;
+}
+.manual-btn{
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s
+}
+.manual-btn:not(:last-child){
+    margin-right: 70px;
+}
+.manual-btn:hover{
+    background: black;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+/* ----------------------------------------------header----------------------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    background-color: whitesmoke;
+}
+header.sticky{
+    paddding: 5px 100px;
+    /*background-image:  url("image/navbar3.jpg");*/
+	/*background: linear-gradient(to right, #fdfcfb , #e2d1c3);  */
+background-color: #c3cbdc;
+background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+    height: auto; 
+    background-position: center; 
+    background-size: cover; 
+    
+ }
+ header.sticky logo,
+ header.sticky ul li a{
+     color: #000;
+	 width: 50px;
+	 height: 60px;
+	 
+ }
+ /* -------------------------------------------navigationbar------------------*/
+nav{
+    position: relative;
+    height: 80px;
+    width: 100%;
+    font-family: Lucida Bright;
+}
+nav ul{
+    float: right;
+    margin-top: 25px;
+    list-style: none;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 40px;
+}
+nav ul li a{
+    color: black;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+nav ul li a:hover{
+    background-color:lightgray; /*COLOR FOR BUTTON HOVER FOR NAVBAR*/
+    color: black;
+}
+logo img{
+    vertical-align: top;
+    max-width: 10%; 
+} 
+#mission
+{
+
+	padding-bottom: 50px;
+	color: #555;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+            width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: none;
+ 
+}
+.mission-content
+{
+	padding-top: 20px;
+}
+/* --------------------------------------contact----------------------*/
+.contact-wrap{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+	text-align: center;
+}
+.contact-in{
+    padding: 40px 30px;
+    font-family: Lucida Bright;
+}
+.contact-in:nth-child(1)
+{
+    flex: 30%;
+    background-color: black;
+    opacity: 0.3;
+    color: #fff;
+}
+.contact-in:nth-child(2)
+{
+    flex: 45%;
+    background: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact-in:nth-child(3)
+{
+    flex: 25%;
+    padding: 0;
+}
+.contact-in h1 {
+   font-size: 18px;
+   color: black;
+   text-transform: uppercase;
+   font-weight: 500;
+   margin-bottom: 20px;
+   text-align: center;
+}
+.contact-in h2 {
+   font-size: 20px;
+   font-weight: 400;
+   margin-bottom: 15px;
+}
+.contact-in h2 i {
+   font-size: 16px;
+   width: 40px;
+   height: 40px;
+   margin-right: 10px;
+   background: #f5f5f5;
+   color: #000;
+   border-radius: 50px;
+   line-height: 40px;
+   text-align: center;
+}
+.contact-in p {
+   font-size: 14px;
+   font-weight: 300;
+   margin-bottom: 20px;
+}
+.contact-in ul {
+   padding: 0;
+   margin: 0;
+}
+.contact-in ul li {
+   list-style: none;
+   display: inline-block;
+   margin-right: 5px;
+   margin-top: 5px;
+}
+.contact-in ul li a {
+   width: 30px;
+   height: 30px;
+   text-align: center;
+   background: black;
+   border-radius: 50px;
+   display: block;  
+}
+.contact-in ul li a i {
+   font-size: 14px;
+   line-height: 30px;
+   color: #000;
+}
+.contact-in form {
+   width: 100%;
+   height: auto;
+}
+.contact-in-input {
+   width: 100%;
+   height: 40px;
+   margin-bottom: 20px;
+   border:1px solid black;
+   outline: none;
+   padding-left: 5px;
+   background-color: whitesmoke;
+   color: black;
+   font-size: 12px;
+   font-weight: 300;
+   font-family: 'Poppins', sans-serif;
+}
+.contact-in-input::placeholder{
+   color: black; 
+}
+.contact-in-textarea {
+   width: 100%;
+   height: 140px;
+   margin-bottom: 20px;
+   border:1px solid black;
+   outline: none;
+   padding-top: 5px;
+   padding-left: 5px;
+   background-color: whitesmoke;
+   color: black;
+   font-size: 12px;
+   font-weight: 300;
+   font-family: 'Poppins', sans-serif;
+}
+.contact-in-textarea::placeholder{
+   color: black;
+}
+.contact-in-btn {
+   width: 100%;
+   height: 40px;
+   border:1px solid black;
+   outline: none;
+   background-color: whitesmoke;
+   color: black;
+   font-size: 15px;
+   font-weight: 600;
+   font-family: Lucida Bright;
+   cursor: pointer;
+}
+.contact-in-btn:hover {
+    background-color: black;
+    color: whitesmoke;
+    opacity: 0.3;
+}
+.contact-in iframe{
+    width: 100%;
+    height: 100%
+}
+@media only screen and (max-width: 480px){
+    .contact-in:nth-child(1)
+{
+    flex: 50%;
+}
+.contact-in:nth-child(2)
+{
+    flex: 50%;
+}
+.contact-in:nth-child(3)
+{
+    flex: 100%;
+}
+}
+@media only screen and (max-width: 360px){
+    .contact-in:nth-child(1)
+{
+    flex: 50%;
+}
+.contact-in:nth-child(2)
+{
+    flex: 50%;
+}
+.contact-in:nth-child(3)
+{
+    flex: 100%;
+}
+}
+/* -----------------------------------------payment ----------------------------------------------------------*/
+.row-checkout {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+.col-75 .container {
+  font-family: Lucida Bright;
+  background-color: slategray;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid wheat;
+  border-radius: 3px;
+  opacity: 0.6;
+  color: white;
+}
+.col-50 input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.col-50 label {
+  margin-bottom: 10px;
+  display: block;
+}
+.col-50 .icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+.btn {
+  background-color: black;
+  color: whitesmoke;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.btn_n {
+  background-color: black;
+  color: whitesmoke;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 65% !important;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.added{
+  background-color: #F90 !important;
+  color: #000;
+  padding: 12px;
+  margin: 10px 0;
+  font-weight:bold !important;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  display:inline-block;
+  text-decoration:none;
+	
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+a {
+  color: brown;
+}
+hr {
+  border: 1px solid black;
+}
+span.price {
+  float: right;
+  color: grey;
+}
+/*-----------------------------------------------about-us-----------------*/
+.wrapper{
+    width: 100%;
+    min-height: 60vh;
+    overflow: hidden;
+}
+.section{
+    width: 70%;
+    display: block;
+    margin:80px auto;
+}
+.left-section{
+    width: 60%;
+    float: left;
+    padding-right: 50px;
+}
+.content{
+    text-align: justify;
+}
+.image-section{
+    float: right;
+    width: 40%;
+    height: 40%;
+}
+.image-section img{
+    max-width: 100%;
+    height: auto;
+}
+.image-section img:hover{
+    opacity: 0.5;
+}
+.content .title h2{
+    color:#1c1c1c;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+.content .title h3{
+    padding-top: 15px;
+    color:#8e8e8e;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+.content p{
+    font-family: sans-serif;
+    padding-top: 15px;
+    color: #1e1e1e;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+.content .button{
+    padding-top: 40px;
+}
+.content .button a{
+    text-decoration: none;
+    padding:10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1bb1dc;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.content .button a:hover{
+    background-color: #0a98c0;
+    transition: 2s ease;
+    color: #fff;
+}
+.content-social{
+    padding-top: 40px;
+}
+.content .social a{
+    color:#cb2d35;
+    font-size: 24px;
+    padding: 0px 5px;
+    font-family: sans-serif;
+}
+.content .social a:hover {
+    color:#7e9344;
+}
+@media screen and (max-width: 768px){
+    .left-section{
+        width: 100px;
+        padding-right: 0px;
+    }
+    .content h2{
+        text-align: center;
+    }
+    .content .button{
+        text-align: center;
+    }
+    .content .social{
+        text-align: center;
+    }
+    .image-section{
+        width: 100%;
+        display: block;
+        margin:50px auto;
+    }
+    .image-section img{
+        width: 100%;
+    }
+}
+/*-------------------------------------------------------register-page--------*/
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: url(image/teh.jpg);
+    min-height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+        
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.chech-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+
+/* ------------------------------------------------------------------------cart page ----------------------------------------------------------*/
+.cart-page{
+    margin: 10px auto;
+    padding: 50px 80px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background: black;
+    font-weight: normal;
+}
+td{
+    padding: 15px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: black;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 80px;
+}
+.total-price table{
+    border-top: 3px solid black;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+
+/* --------------------------------------------footer---------------------*/
+footer{
+	font-family: Lucida Bright;
+    /*background-image: url("image/navbar3.jpg");*/
+	
+	background-color: #c3cbdc;
+	background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+
+	padding: 20px 40px ;
+    color: black;
+    text-align: center;
+
+    background-position: center; 
+    background-size: cover; 
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 160px; 
+  box-sizing: border-box;
+  display: block;
+  position: inherit;
+  text-align: justify;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column a {
+  float: none;
+  display: block;
+  color: blue;
+  text-align: justify;
+  padding: 5px 5px;
+  text-decoration: none;
+  text-decoration-color: blue;
+  font-size: 17px;
+  position: inherit;
+  background-color: none;
+}
+.column a:hover {
+  color: black;
+}
+.column3 a{
+    background-color: gray;
+    color: whitesmoke;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+/*.column3 a:hover, a:active{
+    background-color: pink;
+    color: whitesmoke;
+    
+}*/
+.logo img{
+	position:absolute;
+	margin: auto 30px;
+    width: 110px;
+    height: 90px;
+    
+    
+}
+ .column3 {
+  float: right;
+}
+
+.column3 input[type=text], .column3 input[type=password] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:120px;
+}
+
+.column3 button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: gray;
+  color: whitesmoke;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.column3 button:hover {
+  background-color:lightskyblue; /*button for login form at footer*/
+  color: whitesmoke;
+}
+
+/* ------------------------------------ sign up -------------------------------*/
+.signup button {
+  background-color:black;
+  color: whitesmoke;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  align-item: center;
+  float: none;
+}
+
+.signup button:hover {
+  background-color:blue;
+  color: whitesmoke;
+}
+.signup input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f2f2f2;
+}
+
+.signup input[type=text]:focus, input[type=password]:focus {
+  background-color: aliceblue;
+  outline: none;
+}
+
+/* Extra styles for the cancel button */
+.signup .cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+.signup .container {
+  padding: 16px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #336699;
+  padding-top: 50px;
+}
+.modal-content {
+  background-color:lightgray;
+  margin: 5% auto 5% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  opacity: 0.6;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*---------------------Testimonial-------------------------------------*/
+
+
+
+
+/*---------------------menu-------------------------------------*/
+img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.section-menu{
+    margin: auto;
+    height: auto;
+    text-align: center;
+    background:none;
+}
+.container-menu{
+    width: 80%;
+    margin: 0 auto; 
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+.card{
+    position: relative;
+    overflow: hidden;
+    height: 70%;
+    box-shadow: 0 2px 30px grey;
+    transition: all 0.7s;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: all 0.4s; 
+}
+.card:hover img{
+    transform: scale(1.1);
+    transition: all 0.4s; 
+}
+.blogcontent{
+    position: absolute;
+    left: 0;
+    bottom: -95px;
+    width: 100%;
+    color: black;
+    padding: 0px 0;
+    background: whitesmoke;
+    opacity: 0.7;
+}
+.blogcontent h3{
+    font-size:18px;
+    font-weight: bold;
+    margin:5px; 
+}
+.card:hover .blogcontent{
+    bottom: 0px;
+    transition: all 0.7s;
+}
+.blogcontent a{
+    font-size: 14px;
+    font-weight: 500;
+}
+.blogcontent .btn{
+    display: inline-block;
+    width: 30%;
+    padding: 3px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.blogcontent .btn:hover{
+    background: grey;
+    color: white;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.blogcontent a:hover{
+    text-decoration: underline;
+}
+.blogcontent .desc{
+    font-size: 14px;
+    text-align:center ;
+}
+.blogcontent .price{
+    font-size: 24px;
+    color: darkblue;
+	font-family: Impact;
+}
+
+/* -------------- best seller -------------------*/
+.section-best{
+ 
+    margin-top: 10px;
+    text-align: center;
+    alig-item: center;
+    background: none;
+}
+.container-best{
+    margin: 100px 15px 0px 15px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto; 
+}
+main .best{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    
+}
+.blogcontent-best{
+    position: absolute;
+    left: 0;
+    bottom: -46px;
+    width: 100%;
+    color: black;
+    padding: -10px 0;
+    background: whitesmoke;
+    opacity: 0.7;
+}
+.blogcontent-best h3{
+    font-size:18px;
+    font-weight: 400;
+    margin:0; 
+}
+.card:hover .blogcontent-best{
+    bottom: 0px;
+    transition: all 0.5s;
+}
+.blogcontent-best a{
+    font-size: 14px;
+    font-weight: 500;
+}
+.blogcontent-best .btn{
+    display: inline-block;
+    width: 30%;
+    padding: 3px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.blogcontent-best .btn:hover{
+    background: grey;
+    color: white;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.blogcontent-best a:hover{
+    text-decoration: underline;
+}
+.blogcontent-best .desc{
+    font-size: 14px;
+    text-align:center ;
+}
+.blogcontent-best .price{
+    font-size: 16px;
+    color: brown;
+}
+
+.cart_cnt{
+	color:#500; padding:1px 5px; border-radius:3px;  font-weight:bold; background:#FC0
+}
+
+.payment_btn_1{
+	
+  border: none;
+  outline: 0;
+  padding: 15px 25px;
+  color: whitesmoke;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5s;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.payment_btn_1 i {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.payment_btn_1 i:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.payment_btn_1:hover i {
+  padding-right: 25px;
+}
+
+.payment_btn_1:hover i:after {
+  opacity: 1;
+  right: 0;
+}
+
+.msg_error{
+	padding-top: 50px;
+	text-align:center;
+	font-size:24px;
+	color:red;
+}
+.reg_success{
+	padding-top:50px;
+	text-align:center;
+	font-size:24px;
+	color:#096;
+}
+
+.table_m{
+	border-collapse:collapse;
+	text-align: center;
+}
+.table_m th{
+	text-align: center;
+}
+.table_m td{
+	padding:10px 15px;
+	border:1px solid #CCC;
+
+}
+.table_m td img{
+	max-height:100px !important;
+}
+
+.table_m td.btn_rw{
+	white-space:nowrap
+}
+
+.table_m td.btn_rw a{
+	display:inline-block;
+	padding:5px 10px;
+	background-color:#3C9;
+	color:#FFF;
+	cursor:pointer;
+}
+.table_m td.btn_rw button{
+	display:inline-block;
+	padding:5px 10px;
+	background-color:red;
+	border:none;
+	color:#FFF;
+	cursor:pointer;
+}
+
+.my_form1{
+	display:inline-block;
+	max-width:300px;
+	width:100%;
+	margin-bottom:100px;
+	
+}
+.my_form1 > div{
+	text-align:left;
+	margin:20px 10px;
+	
+}
+.my_form1 label{
+	display:inline-block;
+	width:100%;
+	font-weight:bold;
+}
+.my_form1 input, .my_form1 select{
+	min-width:300px;
+	height:37px;
+	border:1px solid #996;
+	padding-left:10px;
+	
+}
+textarea, .my_form1 textarea{
+	min-width:300px;
+	border:1px solid #996;
+	padding:10px;
+	
+}
+.my_form1 select{
+	min-width:100px;
+	
+}
+
+.searc_area input{
+	height:36px;
+	padding-left:10px;
+	border-radius:5px;
+}
+.searc_area button{
+	padding:10px;
+}
+
+.user_name{
+	color: dodgerblue;
+}
+
+/*-------------------------------------Submit Button Admin-----------------------------*/
+.submit_admin {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #007aff;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 125px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.submit_admin b {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.7s;
+}
+
+.submit_admin b:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit_admin:hover b {
+  padding-right: 25px;
+}
+
+.submit_admin:hover b:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*-------------------------------------Add Button Admin Menu-----------------------------*/
+
+.button_menuadmin {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #007aff;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 13px;
+  width: 200px;
+  transition: all 0.7s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_menuadmin b {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_menuadmin b:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_menuadmin:hover b {
+  padding-right: 25px;
+}
+
+.button_menuadmin:hover b:after {
+  opacity: 1;
+  right: 0;
+}
